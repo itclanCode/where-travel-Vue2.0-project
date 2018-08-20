@@ -13,14 +13,18 @@
                  
    
              </div>
-             <div class="right-city"><span class="city">北京</span><i class="iconfont icon-ico_arrows_unfold"></i></div> 
+             <div class="right-city"><span class="city">{{city}}</span><i class="iconfont icon-ico_arrows_unfold"></i></div> 
          </div>
     </div>
 </template>
 
 <script>
     export default {
-        name: "IndexHeader"
+        name: "IndexHeader",
+        props: {
+            city: String
+            
+        }
     }
 </script>
 
