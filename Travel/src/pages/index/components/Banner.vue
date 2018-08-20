@@ -20,7 +20,7 @@ export default {
           swiperOption: {
               pagination: ".swiper-pagination",
               paginationClickable: true,
-              loop: false
+              loop: true
           },
           imgList: [
               {id:1,imgUrl:"http://img1.qunarzz.com/piao/fusion/1808/5e/514ce60160e62602.jpg_750x200_9b0074e2.jpg"},
@@ -43,6 +43,8 @@ export default {
 .swiper-wrap >>> .swiper-pagination-bullet-active
    background: #fff
 .swiper-wrap
+    height: 0
+    padding-bottom: 27%
     .swiper-img
         width: 100%
         min-width: 7.5rem
