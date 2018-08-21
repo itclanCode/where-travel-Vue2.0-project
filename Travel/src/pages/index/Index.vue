@@ -1,8 +1,10 @@
 <template>
-    <div>
-          <index-header :city="city"></index-header>
-          <index-banner :swiperList="swiperList"></index-banner> 
-          <index-icon></index-icon> 
+    <div class="wrap">
+          <index-header :city = "city"></index-header>
+          <index-banner :swiperList = "swiperList"></index-banner> 
+          <index-icon :iconList = "iconList"></index-icon> 
+          <index-position :position="position"></index-position>
+          <index-tick-sale :tickOnsale="tickOnsale"></index-tick-sale>
     </div>
 </template>
 
@@ -10,13 +12,18 @@
     import IndexHeader from './components/Header' // 头部header组件
     import IndexBanner from './components/Banner' // banner组件
     import IndexIcon from './components/Icon'
+    import IndexPosition from './components/Position'
+    import IndexTickSale from './components/TickSale'
     import axios from 'axios'
     export default {
         name: "Index",
         data () {
             return {
                 city: '',
-                swiperList: []
+                swiperList: [],
+                iconList: [],
+                position: [],
+                tickOnsale:[]
             }
         },
         methods: {
@@ -24,10 +31,13 @@
                 axios.get('/static/mock/index.json')
                 .then (res => {
                     res = res.data;
-                    if (res.ret === true) {
+                    if (res.ret === true && res.data) {
                         const data = res.data;
                         this.city = data.city;
                         this.swiperList = data.swiperList;
+                        this.iconList = data.iconList;
+                        this.position = data.position;
+                        this.tickOnsale = data.tickOnsale;
                     }
                 })
                 .catch (err => {
@@ -41,11 +51,16 @@
         components: {
             IndexHeader,
             IndexBanner,
-            IndexIcon
+            IndexIcon,
+            IndexPosition,
+            IndexTickSale
         }
     }
 </script>
 
 <style lang="stylus" scoped>
- 
+.wrap 
+   height: 100%
+   height:100%
+   background: #F5F5F5
 </style>

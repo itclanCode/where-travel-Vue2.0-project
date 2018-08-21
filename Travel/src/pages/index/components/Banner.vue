@@ -1,6 +1,6 @@
 <template>
     <div class="swiper-wrap">
-        <swiper :options="swiperOption" ref="mySwiper">
+        <swiper :options="swiperOption" ref="mySwiper" v-if="showSwiper">
             <!-- slides -->
             <swiper-slide v-for="item in swiperList" :key="item.id">
                 <img class="swiper-img" :src="item.imgUrl" alt="">
@@ -26,7 +26,13 @@ export default {
               loop: true
           }
       }
+   },
+   computed: {
+       showSwiper () {
+           return this.swiperList.length;
+       }
    }
+
 }
 </script>
 

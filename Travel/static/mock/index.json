@@ -32,41 +32,55 @@
       }],
     "iconList": [{
         "id": "0001",
-        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
         "desc": "景点门票"
       }, {
         "id": "0002",
-        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1711/df/86cbcfc533330d02.png",
-        "desc": "滑雪季"
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
+        "desc": "北京必备游"
       }, {
         "id": "0003",
-        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1710/a6/83f636bd75ae6302.png",
-        "desc": "泡温泉"
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/6a/45f595250c73d102.png",
+        "desc": "夏日玩水"
       }, {
         "id": "0004",
-        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/35/2640cab202c41b02.png",
-        "desc": "动植园"
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png",
+        "desc": "文化古迹"
       }, {
-        "id": "0005",
-        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/d0/e09575e66f4aa402.png",
-        "desc": "游乐园"
+  "id": "0005",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
+        "desc": "动植物园"
       }, {
         "id": "0006",
-        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/59/569d3c096e542502.png",
-        "desc": "必游榜单"
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/6c/9e54a8540fee0102.png",
+        "desc": "故宫"
       }, {
         "id": "0007",
-        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/17/4bd370f3eb1acd02.png",
-        "desc": "演出"
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png",
+        "desc": "一日游"
       }, {
         "id": "0008",
-        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/7f/b1ea3c8c7fb6db02.png",
-        "desc": "城市观光"
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/95/8d02011d149bdb02.png",
+        "desc": "汽车票"
       }, {
-        "id": "0009",
-        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/a9/ffc620dbda9b9c02.png",
-        "desc": "一日游"
+        "id": "1000",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png",
+        "desc": "游乐场"
+      },{
+        "id": "1001",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/80/416c6ab3368d1f02.png",
+        "desc": "全部玩乐"
       }],
+    "position":[{
+         "nearby":"附近",
+         "playWay":"玩水季"
+    }],
+    "tickOnsale":[
+      {
+        "LeftImgUrl":"http://img1.qunarzz.com/piao/fusion/1806/29/30427c0e0658b502.png",
+        "RightImgUrl":"http://img1.qunarzz.com/piao/fusion/1808/84/887ec92cae51f302.png"
+      }
+    ],
     "recommendList": [{
         "id": "0001",
         "imgUrl": "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg",
