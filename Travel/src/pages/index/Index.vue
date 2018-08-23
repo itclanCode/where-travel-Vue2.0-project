@@ -5,6 +5,8 @@
           <index-icon :iconList = "iconList"></index-icon> 
           <index-position :position="position"></index-position>
           <index-tick-sale :tickOnsale="tickOnsale"></index-tick-sale>
+          <index-this-week :thisWeekList="thisWeekList"></index-this-week>  
+          <index-guess-like></index-guess-like>   
     </div>
 </template>
 
@@ -14,6 +16,8 @@
     import IndexIcon from './components/Icon'
     import IndexPosition from './components/Position'
     import IndexTickSale from './components/TickSale'
+    import IndexThisWeek from './components/ThisWeekList'
+    import IndexGuessLike from './components/GuessLike'
     import axios from 'axios'
     export default {
         name: "Index",
@@ -23,7 +27,8 @@
                 swiperList: [],
                 iconList: [],
                 position: [],
-                tickOnsale:[]
+                tickOnsale: [],
+                thisWeekList: []
             }
         },
         methods: {
@@ -38,6 +43,7 @@
                         this.iconList = data.iconList;
                         this.position = data.position;
                         this.tickOnsale = data.tickOnsale;
+                        this.thisWeekList = data.thisWeekList;
                     }
                 })
                 .catch (err => {
@@ -53,7 +59,9 @@
             IndexBanner,
             IndexIcon,
             IndexPosition,
-            IndexTickSale
+            IndexTickSale,
+            IndexThisWeek,
+            IndexGuessLike
         }
     }
 </script>
