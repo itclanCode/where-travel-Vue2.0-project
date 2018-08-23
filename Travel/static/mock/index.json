@@ -85,20 +85,23 @@
       {
         "id":"001",
         "imgUrl":"http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_150x150_06cb3e52.jpg",
+        "mpHotsaleTagimg":"http://img1.qunarzz.com/piao/fusion/1710/ab/159673b63e6ca702.png",
         "mpHotsaleSight":"故宫",
         "mpHotSalePrice":"20"
       },
       {
         "id":"002",
         "imgUrl":"http://img1.qunarzz.com/sight/p0/1708/2b/2b3b94de99c0a425a3.img.jpg_150x150_2dec3e78.jpg",
-        "mpHotsaleSight":"故宫",
+        "mpHotsaleTagimg":"http://img1.qunarzz.com/piao/fusion/1710/2d/36d0c4adaebbbc02.png",
+        "mpHotsaleSight":"八达岭长城",
         "mpHotSalePrice":"20"
       },
       {
         "id":"003",
         "imgUrl":"http://img1.qunarzz.com/sight/p0/201306/13/bdf22f69fab0ee4ec8d65eac.jpg_150x150_35b4b15f.jpg",
+        "mpHotsaleTagimg":"http://img1.qunarzz.com/piao/fusion/1710/67/edc47ffef9e96b02.png",
         "mpHotsaleSight":"八达岭长城",
-        "mpHotSalePrice":"40"
+        "mpHotSalePrice":"43"
       },
       {
         "id":"004",

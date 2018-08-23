@@ -5,63 +5,56 @@
               <span class="week-right">全部榜单</span>
           </div>
           <div class="bottom wrapper" ref="wrapper">
-                <ul class="content clearfix" ref="content">
-                    <li ref="liitem" v-for="item in thisWeekList" :key="item.id"><img class="imgList" :src="item.imgUrl" :alt="item.mpHotsaleSight"></li>
+                <ul class="content" ref="content">
+                    <li ref="liitem" v-for="item in thisWeekList" :item="item" :key="item.id">
+                        <img class="imgList" :src="item.imgUrl" :alt="item.mpHotsaleSight">
+                        <img class="mp-hotsale-tagimg" v-show="showMpHotImg" ref="mpHotsaleTagimg" :src="item.mpHotsaleTagimg">
+                        {{item.mpHotsaleSight}}
+                        <p><span class="mp-hotsale-price">{{item.mpHotSalePrice}}</span>起</p>
+
+                    </li>
                 </ul>
           </div>
     </div>
 </template>
 
 <script>
-    import BScroll from 'better-scroll'
+    
     export default {
         name: "IndexThisWeek",
+        data(){
+            return {
+                mpHotImg: true
+            } 
+        },
         props: {
             thisWeekList:{
                 type: Array
+            },
+            mpHotsaleTagimg:{
+                type: String
             }
         },
         created(){
             //this.initHorScroll();
+            
         },
-        mounted () {
-            /* const wrapper =  this.$refs.wrapper;
-            let scroll = new BScroll(wrapper,{
-                scrollX: true,
-                eventPassthrough:'vertical' //忽略竖直方向的滚动
-            });
-            console.log(scroll); */
-            this.$nextTick(()=>{
-                this.initHorScroll();   
-            })
-            
-            
+        mounted () {  
+           this.showMpHotImg();
+        },
+        computed: {
+          
+          
         },
         methods: {
-            initHorScroll(){
-                let width = 0+"rem";
-                for (let i = 0;i<this.thisWeekList;i++){
-                    //width += this.$refs.listitem[0].getBoundingClientRect().width;
-                    width+=this.$refs.listitem[0].getBoundingClientRect().width;
-                    console.log(width);
-                }
-                this.$refs.content.style.width=width+'rem';
-                if (!this.scroll) {
-                        this.scroll = new BScroll(this.$refs.wrapper, {
-                            scrollX:true,
-                            eventPassthrough:'vertical'
-                        })
-                } else {
-                    this.scroll.refresh();
-                }
-            }
+           showMpHotImg (item){
+              if(item.mpHotsaleTagimg){
+                  return this.mpHotsaleTagimg;
+              }
+          }
         },
         watch: {
-            "thisWeekList"(){
-                this.$nextTick(() => {
-                    this.initHorScroll();
-                })
-            }
+           
         }
 
     }
@@ -94,25 +87,39 @@
         font-size: .24rem
         color: #616161
    .bottom
-     width: 25rem
-     position:absolute 
-     left:0
-     top:0.84rem
-     overflow:hidden
+     position:relative 
+     overflow-x:scroll
+     white-space: nowrap
      height: 3rem
-     padding: 0 .1rem .2rem .2rem
-     white-space nowrap
      .content 
+         width: 7.5rem
          height: 2.8rem
-         oveflow:hidden
+         padding: 0 0.2rem
        li 
          width: 2rem
-         height: 2.8rem
-         border: 1px solid red 
+         height: 2.8rem 
          margin-right:.1rem
-         float: left
+         display:inline-block
+         position:relative
+         text-align:center
+         color:#212121
          .imgList
              width:2rem
              height: 2rem
+             display:block
+             margin-bottom: .2rem
+         .mp-hotsale-tagimg
+             width:  0.84rem
+             height: 0.4rem
+             position:absolute 
+             left: 0
+             top:0
+             z-index: 999
+         p
+            margin-top:.1rem
+            .mp-hotsale-price
+                color:#ff8300
+                display:inline-block
+                vertical-align:middle
         
 </style>
