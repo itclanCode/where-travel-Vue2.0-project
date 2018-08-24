@@ -6,9 +6,9 @@
           </div>
           <div class="bottom wrapper" ref="wrapper">
                 <ul class="content" ref="content">
-                    <li ref="liitem" v-for="item in thisWeekList" :item="item" :key="item.id">
+                    <li ref="liitem" v-for="item in thisWeekList"  :key="item.id">
                         <img class="imgList" :src="item.imgUrl" :alt="item.mpHotsaleSight">
-                        <img class="mp-hotsale-tagimg" v-show="showMpHotImg" ref="mpHotsaleTagimg" :src="item.mpHotsaleTagimg">
+                        <img class="mp-hotsale-tagimg" v-if="item.mpHotsaleTagimg" ref="mpHotsaleTagimg" :src="item.mpHotsaleTagimg">
                         {{item.mpHotsaleSight}}
                         <p><span class="mp-hotsale-price">{{item.mpHotSalePrice}}</span>起</p>
 
@@ -24,19 +24,15 @@
         name: "IndexThisWeek",
         data(){
             return {
-                mpHotImg: true
+                
             } 
         },
         props: {
             thisWeekList:{
                 type: Array
-            },
-            mpHotsaleTagimg:{
-                type: String
             }
         },
         created(){
-            //this.initHorScroll();
             
         },
         mounted () {  
@@ -44,14 +40,9 @@
         },
         computed: {
           
-          
         },
         methods: {
-           showMpHotImg (item){
-              if(item.mpHotsaleTagimg){
-                  return this.mpHotsaleTagimg;
-              }
-          }
+           
         },
         watch: {
            

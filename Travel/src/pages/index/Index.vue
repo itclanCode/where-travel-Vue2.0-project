@@ -5,8 +5,8 @@
           <index-icon :iconList = "iconList"></index-icon> 
           <index-position :position="position"></index-position>
           <index-tick-sale :tickOnsale="tickOnsale"></index-tick-sale>
-          <index-this-week :thisWeekList="thisWeekList" :mpHotsaleTagimg="mpHotsaleTagimg"></index-this-week>  
-          <index-guess-like></index-guess-like>   
+          <index-this-week :thisWeekList="thisWeekList"></index-this-week>  
+          <index-guess-like :guessList="guessList"></index-guess-like>   
     </div>
 </template>
 
@@ -29,7 +29,7 @@
                 position: [],
                 tickOnsale: [],
                 thisWeekList: [],
-                mpHotsaleTagimg:""
+                guessList:[]
             }
         },
         methods: {
@@ -45,7 +45,7 @@
                         this.position = data.position;
                         this.tickOnsale = data.tickOnsale;
                         this.thisWeekList = data.thisWeekList;
-                        this.mpHotsaleTagimg = data.thisWeekList.mpHotsaleTagimg;
+                        this.guessList = data.guessList;
                     }
                 })
                 .catch (err => {
