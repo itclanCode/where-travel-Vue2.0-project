@@ -23,12 +23,19 @@
 
 <script>
     export default {
+        data () {
+            return {
+                
+            }
+        },
         props: {
             guessList:{
                 type:Array
             }
         },
-        name: "IndexGuessLike"
+        name: "IndexGuessLike",
+        computed: {
+        }
     }
 </script>
 

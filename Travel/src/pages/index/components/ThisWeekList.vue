@@ -36,7 +36,7 @@
             
         },
         mounted () {  
-           this.showMpHotImg();
+        // this.showMpHotImg();
         },
         computed: {
           
