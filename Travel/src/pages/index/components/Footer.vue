@@ -1,13 +1,13 @@
 <template>
     <div>
           <div class="main-wrapper">
-              <ul class="main-nav-wrapper">
-                  <li v-for="item in footerList" :key="item.id">
+              <ul class="main-nav-wrapper" :class="showStatus?defaultClass:activeClass">
+                  <li v-for="item in footerList"   :key="item.id" >
                      <!--  <img class="nav-icon" :src="item.imgUrl"> -->
                       {{item.title}}
                   </li>
               </ul>
-              <div class="toogle"><span class="tag" @click="moreSelect">更多</span></div>      
+              <div class="toogle"><span class="tag" @click="toogleList">更多</span></div>      
           </div>
           <div class="footer-nav border-bottom">
                   <ul class="footer-ul">
@@ -32,9 +32,13 @@
 <script>
     export default {
         name: "IndexFooter",
-        data(){
+        data () {
             return {
-                footerUlList:this.footerList
+                footerUlList: this.footerList,
+                showStatus: true,
+                defaultClass: 'defaultLi',
+                activeClass: 'activeLi'
+
             }
         },
         props: {
@@ -42,10 +46,23 @@
                 type: Array
             }
         },
+        computed: {
+           
+           
+        },
+        mounted () {
+              
+        },
         methods: {
-            moreSelect(){
-               alert(this.footerUlList); 
-            }
+           toogleList() {
+               if(this.showStatus){
+                   this.showStatus = true;                 
+               }else{
+                   this.showStatus = false;
+               }
+               this.showStatus = !this.showStatus;
+              
+           }
         }
     }
 </script>
@@ -55,16 +72,31 @@
     .main-nav-wrapper
         padding: 0rem .84rem 0 .84rem
         text-align: center
-    li
-        display: inline-block
-        height: .62rem
-        width: 1.3rem
-        text-align: center
-        line-height: .62rem
-        font-size: 0.24rem
-        .nav-icon
-           width: .44rem
-           height: .44rem
+    .activeLi
+       height:auto
+       li
+            display: inline-block
+            height: .62rem
+            width: 1.3rem
+            text-align: center
+            line-height: .62rem
+            font-size: 0.24rem
+            .nav-icon
+              width: .44rem
+              height: .44rem
+    .defaultLi
+        height: 0.6rem
+        overflow:hidden
+        li
+            display: inline-block
+            height: .62rem
+            width: 1.3rem
+            text-align: center
+            line-height: .62rem
+            font-size: 0.24rem
+            .nav-icon
+              width: .44rem
+              height: .44rem
     .toogle
        padding-right: 1.5rem
        display: flex
