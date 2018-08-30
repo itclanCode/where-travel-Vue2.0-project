@@ -13,7 +13,9 @@
                  
    
              </div>
-             <div class="right-city"><span class="city">{{city}}</span><i class="iconfont icon-ico_arrows_unfold"></i></div> 
+             <div class="right-city">
+                 <router-link to="/city" tag="div"><span class="city">{{city}}</span><i class="iconfont icon-ico_arrows_unfold"></i></router-link>
+            </div> 
          </div>
     </div>
 </template>

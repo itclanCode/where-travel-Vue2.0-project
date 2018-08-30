@@ -1,6 +1,8 @@
 {
 	"ret": true,
 	"data":{
+		"cityTitle":"城市选择",
+		"citySelect":["境内","境外港澳台"],
 		"hotCities": [{
 			"id": 1,
 			"spell": "beijing",
@@ -25,6 +27,30 @@
 			"id": 125,
 			"spell": "guilin",
 			"name": "桂林"
+		},{
+			"id": 126,
+			"spell": "shenzhen",
+			"name": "深圳"
+		},{
+			"id": 127,
+			"spell": "suzhou",
+			"name": "苏州"
+		},{
+			"id": 128,
+			"spell": "xiamen",
+			"name": "厦门"
+		},{
+			"id": 129,
+			"spell": "chengdu",
+			"name": "成都"
+		},{
+			"id": 130,
+			"spell": "xianggang",
+			"name":"香港"
+		},{
+			"id": 131,
+			"spell": "hangzhou",
+			"name":"杭州"
 		}],
 		"cities": {
 			"A": [{
