@@ -3,7 +3,7 @@
         <div class="city-list">
                <h2>热门城市</h2>
                <ul class="mp-list clearfix mp-td3">
-                    <li v-for="item in hotCities" :key="item.id"  class="list border-right">{{item.name}}</li>
+                    <li @click="handleClick(item.name)" v-for="item in hotCities" :key="item.id"  class="list border-right">{{item.name}}</li>
                </ul>
         </div>
         <div class="city-list">
@@ -17,7 +17,7 @@
         <div class="city-list" id="city-list" v-for="(value,key) in cities" :key="key" ref="cityList">
                <h2 ref="keyLocation" :id="key">{{key}}</h2>
                <ul class="mp-list clearfix mp-td4">
-                    <li v-for="item in value" :key="item.id" class="list border-right">{{item.name}}</li>
+                    <li @click="handleClick(item.name)" v-for="item in value" :key="item.id" class="list border-right">{{item.name}}</li>
                </ul>
         </div>
         
@@ -49,8 +49,13 @@
         },
         methods: {
             setScroll(ev) {
-              
                
+            },
+            handleClick(city){
+                // changeCity是一个方法,city作为参数传递过去，派发一个changeCity的方法,下面直接用commit去触发也是一样的
+                this.$store.dispatch('changeCity',city);  
+                this.$router.push("/");
+                //alert(city);
             }
         }
     }
@@ -68,7 +73,7 @@
      box-sizing:border-box
 .city-list >>> .mp-td3 li 
    width: 33.3%
-.city-list >>> .mp-td6 li   
+.city-list >>> .mp-td6 .list   
    width: 16.66%
    border-bottom: none
 .city-list >>> .mp-td4 li 

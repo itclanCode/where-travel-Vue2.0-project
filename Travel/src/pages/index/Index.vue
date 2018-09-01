@@ -1,6 +1,6 @@
 <template>
     <div class="wrap">
-          <index-header :city = "city"></index-header>
+          <index-header></index-header>
           <index-banner :swiperList = "swiperList"></index-banner> 
           <index-icon :iconList = "iconList"></index-icon> 
           <index-position :position="position"></index-position>
@@ -27,7 +27,6 @@
         name: "Index",
         data () {
             return {
-                city: '',
                 swiperList: [],
                 iconList: [],
                 position: [],
@@ -45,7 +44,7 @@
                     res = res.data;
                     if (res.ret === true && res.data) {
                         const data = res.data;
-                        this.city = data.city;
+                        //this.city = data.city;
                         this.swiperList = data.swiperList;
                         this.iconList = data.iconList;
                         this.position = data.position;

@@ -6,12 +6,13 @@ import router from './router'
 import FastClick from 'fastclick' // 引入fastclick解决300毫秒延迟问题
 import '@/assets/styles/border.css' // 引入解决1像素边框问题
 import '@/assets/styles/reset.css' // 重置样式
-import '@/assets/styles/iconfont/iconfont.css' 
-//import '@/assets/js/MobileAdaptation.js'  // 移动端适配js
+import '@/assets/styles/iconfont/iconfont.css'
+import '@/assets/js/MobileAdaptation.js' // 移动端适配js
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
+import store from './store' // 引入store 
 
-Vue.use(VueAwesomeSwiper) 
+Vue.use(VueAwesomeSwiper)
 
 Vue.config.productionTip = false
 FastClick.attach(document.body)
@@ -20,6 +21,7 @@ FastClick.attach(document.body)
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

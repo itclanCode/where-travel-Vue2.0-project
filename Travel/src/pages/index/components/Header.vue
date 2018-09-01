@@ -14,7 +14,7 @@
    
              </div>
              <div class="right-city">
-                 <router-link to="/city" tag="div"><span class="city">{{city}}</span><i class="iconfont icon-ico_arrows_unfold"></i></router-link>
+                 <router-link to="/city" tag="div"><span class="city">{{this.$store.state.city}}</span><i class="iconfont icon-ico_arrows_unfold"></i></router-link>
             </div> 
          </div>
     </div>
@@ -22,10 +22,9 @@
 
 <script>
     export default {
-        name: "IndexHeader",
-        props: {
-            city: String
-            
+        name: "IndexHeader", 
+        computed: {
+           
         }
     }
 </script>
